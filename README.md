@@ -1,6 +1,8 @@
 # Batch-Serving-Layers-MARI
 Tarea 2 Big Data
 
+Grupo 7 (Gabriel Dintrans, Paula Ríos, Carlos Vega)
+
 ### Descripción
 Se tienen datos de boletas del retail MARI, los cuales se almacenan a una cola local en Kafka. Para esto se realiza lo siguiente (código entregado por el equipo docente):
 - Definición de un Graph Schema y estructura en Apache Thrift.
