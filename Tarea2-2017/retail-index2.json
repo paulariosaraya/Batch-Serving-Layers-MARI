@@ -1,0 +1,49 @@
+{
+  "type" : "index_hadoop",
+  "spec" : {
+    "ioConfig" : {
+      "type" : "hadoop",
+      "inputSpec" : {
+        "type" : "static",
+        "paths" : "/mnt/hgfs/Tarea1-2017/batchviews.json"
+      }
+    },
+    "dataSchema" : {
+      "dataSource" : "numboletas2",
+      "granularitySpec" : {
+        "type" : "uniform",
+        "segmentGranularity" : "day",
+        "queryGranularity" : "none",
+        "intervals" : ["2012-01-01/2018-01-03"]
+      },
+      "parser" : {
+        "type" : "hadoopyString",
+        "parseSpec" : {
+          "format" : "json",
+          "dimensionsSpec" : {
+            "dimensions" : []
+          },
+          "timestampSpec" : {
+            "format" : "auto",
+            "column" : "Dia"
+          }
+        }
+      },
+      "metricsSpec" : [
+        {
+          "name" : "Ventas",
+          "type" : "longSum",
+          "fieldName" : "Ventas"
+        }
+      ]
+    },
+    "tuningConfig" : {
+      "type" : "hadoop",
+      "partitionsSpec" : {
+        "type" : "hashed",
+        "targetPartitionSize" : 5000000
+      },
+      "jobProperties" : {}
+    }
+  }
+}

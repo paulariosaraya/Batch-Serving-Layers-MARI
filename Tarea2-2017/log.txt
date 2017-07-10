@@ -1,0 +1,60 @@
+17/05/14 18:12:38 INFO util.HadoopUtil: resolving application jar from found main method on: cl.uchile.tarea1.Consulta1
+17/05/14 18:12:38 INFO planner.HadoopPlanner: using application jar: /mnt/hgfs/Tarea1-2017/target/Tarea1-2017-1.0-SNAPSHOT-shaded.jar
+17/05/14 18:12:38 INFO property.AppProps: using app.id: A2FFBE0953814B1ABC68FACF6C7764F5
+17/05/14 18:12:39 INFO Configuration.deprecation: mapred.used.genericoptionsparser is deprecated. Instead, use mapreduce.client.genericoptionsparser.used
+17/05/14 18:12:41 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+17/05/14 18:12:42 INFO hadoop.Hfs: forcing job to local mode, via sink: batchview["SequenceFile[[UNKNOWN]->['?json']]"]["/tmp/temp114274669503100967113190919309815"]
+17/05/14 18:12:42 INFO util.Version: Concurrent, Inc - Cascading 2.5.1
+17/05/14 18:12:42 INFO flow.Flow: [] starting
+17/05/14 18:12:42 INFO flow.Flow: []  source: PailTap["PailScheme[['pail_root', 'bytes']->[ALL]]"]["/masterset/data/9"]
+17/05/14 18:12:42 INFO flow.Flow: []  source: PailTap["PailScheme[['pail_root', 'bytes']->[ALL]]"]["/masterset/data/4"]
+17/05/14 18:12:42 INFO flow.Flow: []  sink: batchview["SequenceFile[[UNKNOWN]->['?json']]"]["/tmp/temp114274669503100967113190919309815"]
+17/05/14 18:12:42 INFO flow.Flow: []  parallel execution is enabled: true
+17/05/14 18:12:42 INFO flow.Flow: []  starting jobs: 3
+17/05/14 18:12:42 INFO flow.Flow: []  allocating threads: 3
+17/05/14 18:12:42 INFO flow.FlowStep: [] starting step: (1/3)
+17/05/14 18:12:42 INFO client.RMProxy: Connecting to ResourceManager at hadoop-master/192.168.233.128:8032
+17/05/14 18:12:43 INFO client.RMProxy: Connecting to ResourceManager at hadoop-master/192.168.233.128:8032
+17/05/14 18:13:14 INFO util.Update: newer Cascading release available: 2.5.6
+17/05/14 18:13:17 INFO mapreduce.JobSubmitter: number of splits:318
+17/05/14 18:13:18 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1494794813892_0002
+17/05/14 18:13:20 INFO impl.YarnClientImpl: Submitted application application_1494794813892_0002
+17/05/14 18:13:21 INFO mapreduce.Job: The url to track the job: http://hadoop-master:8088/proxy/application_1494794813892_0002/
+17/05/14 18:13:21 INFO flow.FlowStep: [] submitted hadoop job: job_1494794813892_0002
+17/05/14 18:13:21 INFO flow.FlowStep: [] tracking url: http://hadoop-master:8088/proxy/application_1494794813892_0002/
+17/05/14 18:15:32 WARN hadoop.HadoopStepStats: fetching counters timed out after: 5 seconds, attempts: 1
+17/05/14 18:31:36 WARN hadoop.HadoopStepStats: fetching counters timed out after: 5 seconds, attempts: 2
+17/05/14 18:43:55 WARN flow.FlowStep: [] hadoop job job_1494794813892_0002 state at FAILED
+17/05/14 18:43:55 WARN flow.FlowStep: [] failure info: Task failed task_1494794813892_0002_m_000005
+Job failed as tasks failed. failedMaps:1 failedReduces:0
+
+17/05/14 18:43:57 WARN flow.FlowStep: [] task completion events identify failed tasks
+17/05/14 18:43:57 WARN flow.FlowStep: [] task completion events count: 10
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000002_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000007_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000000_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000004_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000005_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000003_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000006_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000001_0, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000007_1, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] event = Task Id : attempt_1494794813892_0002_m_000002_1, Status : FAILED
+17/05/14 18:43:57 WARN flow.FlowStep: [] abandoning step: (2/3), predecessor failed: (1/3)
+17/05/14 18:43:57 INFO flow.FlowStep: [] stopping: (2/3)
+17/05/14 18:43:57 WARN flow.FlowStep: [] abandoning step: (3/3) ...9503100967113190919309815, predecessor failed: (2/3)
+17/05/14 18:43:57 INFO flow.FlowStep: [] stopping: (3/3) ...9503100967113190919309815
+17/05/14 18:43:57 INFO flow.Flow: [] stopping all jobs
+17/05/14 18:43:57 INFO flow.FlowStep: [] stopping: (3/3) ...9503100967113190919309815
+17/05/14 18:43:57 INFO flow.FlowStep: [] stopping: (2/3)
+17/05/14 18:43:57 INFO flow.FlowStep: [] stopping: (1/3)
+17/05/14 18:43:57 INFO flow.Flow: [] stopped all jobs
+Exception in thread "main" cascading.flow.FlowException: step failed: (1/3), with job id: job_1494794813892_0002, please see cluster logs for failure messages
+	at cascading.flow.planner.FlowStepJob.blockOnJob(FlowStepJob.java:221)
+	at cascading.flow.planner.FlowStepJob.start(FlowStepJob.java:149)
+	at cascading.flow.planner.FlowStepJob.call(FlowStepJob.java:124)
+	at cascading.flow.planner.FlowStepJob.call(FlowStepJob.java:43)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
